@@ -14,7 +14,7 @@
 
       in {
         packages.default = rust.buildRustPackage {
-          pname = "parkour-helper";
+          pname = "parkour";
           version = "0.1.0";
           
           src = ./.;
