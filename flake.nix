@@ -23,7 +23,7 @@
             lockFile = ./Cargo.lock;
           };
           nativeBuildInputs = [ pkgs.libinput.dev pkgs.pkg-config ];
-          buildInputs = [ pkgs.xdotool pkgs.xorg.libXi pkgs.gcc pkgs.libinput.dev pkgs.systemdMinimal pkgs.xorg.libX11.dev pkgs.xorg.libXtst ];
+          buildInputs = [ pkgs.alsa-lib pkgs.xdotool pkgs.xorg.libXi pkgs.gcc pkgs.libinput.dev pkgs.systemdMinimal pkgs.xorg.libX11.dev pkgs.xorg.libXtst ];
         };
 
         devShells.default = pkgs.mkShell {
@@ -36,6 +36,7 @@
             pkgs.xorg.libX11.dev
             pkgs.pkg-config
             pkgs.cargo
+            pkgs.alsa-lib
             pkgs.rustc
             pkgs.rust-analyzer
             pkgs.xorg.libXi
