@@ -14,7 +14,7 @@ For nixos/nix :
 ``` bash
 git clone https://github.com/quotequack/parkourlegacyhelper
 cd parkourlegacyhelper
-nix profile install .#parkour
+nix profile install .#packages.x86_64-linux.default
 ```
 For linux :
 ``` bash
