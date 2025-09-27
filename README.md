@@ -2,6 +2,8 @@
 ## Keybinds
 * R for double space (for wallboosting)
 * Left Alt for quick space (for dashing)
+* 4 for simple mag dash
+* 3 for mag chain
 ## Compatability
 This program uses rdev to do its work so it should work on most platforms (has only been tested on nixos though) (also byfron could be a problem on some platforms)
 ## Contribution

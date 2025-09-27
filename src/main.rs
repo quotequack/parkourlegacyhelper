@@ -3,7 +3,7 @@ use rdev::{EventType,Event};
 use rdev::{simulate, SimulateError};
 
 fn main() {
-    let callback = |event: Event| {
+    let callback = move |event: Event| {
         if let EventType::KeyPress(key) = event.event_type {
             if key == rdev::Key::Alt {
                 println!("space pressed!");
@@ -16,6 +16,38 @@ fn main() {
                 send(&EventType::KeyPress(rdev::Key::Space));
                 send(&EventType::KeyRelease(rdev::Key::Space));
                 sleep(Duration::from_millis(30));
+                send(&EventType::KeyPress(rdev::Key::Space));
+                send(&EventType::KeyRelease(rdev::Key::Space));
+            }
+            if key == rdev::Key::Escape {
+                println!("Exiting...");
+                std::process::exit(0);
+            }
+            if key == rdev::Key::Num3 {
+                
+                send(&EventType::KeyPress(rdev::Key::KeyE));
+                send(&EventType::KeyRelease(rdev::Key::KeyE));
+
+                sleep(Duration::from_millis(18));
+                send(&EventType::KeyPress(rdev::Key::Space));
+                send(&EventType::KeyRelease(rdev::Key::Space));
+                send(&EventType::KeyRelease(rdev::Key::KeyW));
+                send(&EventType::KeyPress(rdev::Key::KeyS));
+                send(&EventType::KeyPress(rdev::Key::KeyC));
+                send(&EventType::KeyRelease(rdev::Key::KeyC));
+                sleep(Duration::from_millis(10));
+                send(&EventType::KeyPress(rdev::Key::Space));
+                send(&EventType::KeyRelease(rdev::Key::Space));
+                send(&EventType::KeyRelease(rdev::Key::KeyS));
+                send(&EventType::KeyPress(rdev::Key::KeyC));
+                send(&EventType::KeyRelease(rdev::Key::KeyC));
+                send(&EventType::KeyPress(rdev::Key::KeyW));
+            }
+            if key == rdev::Key::Num4 {
+                
+                send(&EventType::KeyPress(rdev::Key::KeyE));
+                send(&EventType::KeyRelease(rdev::Key::KeyE));
+                sleep(Duration::from_millis(15));
                 send(&EventType::KeyPress(rdev::Key::Space));
                 send(&EventType::KeyRelease(rdev::Key::Space));
             }
